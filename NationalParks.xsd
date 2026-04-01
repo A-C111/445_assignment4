@@ -1,5 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- failed the ContentTest2 so follow the template given from the sample in pdf-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns="https://a-c111.github.io/445_assignment4" 
+		   targetNamespace="https://a-c111.github.io/445_assignment4" 
+		   elementFormDefault="qualified" 
+		   attributeFormDefault="unqualified">
 
 	<!-- format
 	<xml version"">
