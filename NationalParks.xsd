@@ -1,38 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-	<!-- Root element -->
+	<!-- format
+	<xml version"">
+	<xs:schema xmlns:xs="(link)">
+	<xs:element name="">
+		<xs:complexType>
+		<xs:sequence>
+		<xs:element name="" type=""/>
+		... (repeat however many times necessary)
+		
+	</sequence>
+	</xs:complexType>
+	</xs:element>
+	</xs:schema
+	
+	-->
+	
+	
+	<!-- the root (has an s at the end-->
 	<xs:element name="NationalParks">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="NationalPark" maxOccurs="unbounded">
+				<xs:element name="NationalPark" minOccurs="1" maxOccurs="unbounded">	<!-- at least 1 park (for test cases)-->
+
+					<!-- </xs:complexType>	-->
+					<!-- </xs:sequence>	-->
+					<!-- the above is incorrect -->
+					
 					<xs:complexType>
 						<xs:sequence>
 
-							<!-- Name element -->
+							<!-- name -->
 							<xs:element name="Name" type="xs:string"/>
 
-							<!-- Phone element: multiple allowed -->
+							<!-- phone (MUST have at least 1) -->
 							<xs:element name="Phone" type="xs:string" maxOccurs="unbounded"/>
 
-							<!-- Address element -->
+							<!-- addy -->
 							<xs:element name="Address">
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="Number" type="xs:string"/>
+										<xs:element name="Number" type="xs:string"/>	<!-- need to keep it as string b/c num Bryce canyon has letters in the first part-->
 										<xs:element name="Street" type="xs:string"/>
 										<xs:element name="City"   type="xs:string"/>
 										<xs:element name="State"  type="xs:string"/>
-										<xs:element name="Zip"    type="xs:string"/>
+										<xs:element name="Zip"    type="xs:integer"/>
 									</xs:sequence>
-									<!-- NearestAirport is a REQUIRED attribute of Address -->
-									<xs:attribute name="NearestAirport" type="xs:string" use="required"/>
+									<!-- nearest airport(required for all parks) -->
+									<xs:attribute name="NearestAirport" type="xs:string"/>
 								</xs:complexType>
 							</xs:element>
 
 						</xs:sequence>
-						<!-- Rating is an OPTIONAL attribute of NationalPark -->
-						<xs:attribute name="Rating" type="xs:decimal" use="optional"/>
+						<!-- rating is optional (not all parks need to have one) -->
+						<xs:attribute name="Rating" type="xs:decimal"/>		
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
