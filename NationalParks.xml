@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
-<NationalParks>
+<NationalParks
+	xmlns="https://a-c111.github.io/445_assignment4"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://a-c111.github.io/445_assignment4 https://raw.githubusercontent.com/A-C111/445_assignment4/refs/heads/main/NationalParks.xsd">
+	
 	<!-- from the figure provided in pdf-->
 	<!-- follow the same order-->
 	

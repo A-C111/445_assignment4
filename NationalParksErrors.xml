@@ -2,7 +2,12 @@
 
 <!-- 5 PURPOSELY added errors-->
 
-<NationalPark>			<!-- error #1 changed root elem name to NationalPark (no s at the end)-->
+<NationalPark
+	
+	xmlns="https://a-c111.github.io/445_assignment4"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://a-c111.github.io/445_assignment4 https://raw.githubusercontent.com/A-C111/445_assignment4/refs/heads/main/NationalParks.xsd">
+		<!-- error #1 changed root elem name to NationalPark (no s at the end)-->
 	<!-- from the figure provided in pdf-->
 	<!-- follow the same order-->
 
